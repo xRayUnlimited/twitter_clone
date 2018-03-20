@@ -6,5 +6,9 @@ class Api::TweetsController < ApplicationController
   def search
     render json: TwitterClient.search(params[:term])
   end
+
+  def tweet
+    render json: TwitterClient.tweet(params[:tweet])
+  end
   
 end

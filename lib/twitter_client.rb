@@ -4,6 +4,10 @@ class TwitterClient
     client.home_timeline
   end
 
+  def self.tweet(message)
+    client.update(message)
+  end
+
   def self.search(term)
     tweets = []
     client.search("from:#{term}").each do |tweet|
